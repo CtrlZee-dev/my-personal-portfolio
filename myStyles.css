@@ -1,0 +1,637 @@
+/*LOADING SCREEN -- LOADING SCREEN -- LOADING SCREEN -- LOADING SCREEN -- LOADING SCREEN -- LOADING SCREEN*/
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* or your preferred background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s;
+}
+
+.loader-container {
+  text-align: center;
+}
+
+.loader-logo {
+  width: 120px; /* adjust based on your logo size */
+  height: auto;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 7px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-progress {
+  width: 100%;
+  height: 100%;
+  background-color: #bd78c2; /* or your brand color */
+  animation: loading 1.5s infinite;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Hide loading screen when content is loaded */
+.loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*NAVIGATION STYLESS-- NAVIGATION STYLESS -- NAVIGATION STYLESS -- NAVIGATION STYLESS -- NAVIGATION STYLESS -- NAVIGATION STYLESS*/
+
+/* Navigation Styles */
+#desktop-nav {
+  padding: 15px 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+.btn-outlyns {
+  border: 1px solid black;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #e296e7;
+}
+.btn-outlyns:hover {
+  background-color: #2ecc71;
+}
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+/* Hamburger Menu */
+#hamburger-nav {
+  display: none;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.menu-links {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  width: 200px;
+  padding: 20px;
+  opacity: 70%;
+  border-radius: 15%;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-links li a::after {
+  content: "";
+  position: absolute;
+  color: black;
+  left: 50%;
+  bottom: -4px; /* Position the line below text */
+  width: 0;
+  height: 3px; /* Thickness of the underline */
+  background-color: #2ecc71;
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menu-links li a:hover {
+  font-weight: bold; /* Make text bold */
+  color: black;
+}
+
+.menu-links li a:hover::after {
+  width: 100%; /* Expand the underline */
+  left: 0; /* Move to the full width */
+}
+.menu-links li a {
+  text-decoration: none; /* Remove default underline */
+  font-weight: normal;
+  color: black; /* Default text color */
+  padding: 5px 0; /* Space around the text */
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open {
+  display: block;
+  text-align: center;
+}
+
+.menu-links li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+/* Profile Section */
+#profile {
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section__pic-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: left;
+}
+
+.circle-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 2px;
+  border: 2px solid #bd78c2;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
+
+#socials-container {
+  margin-top: 20px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 2px solid #bd78c2;
+  border-radius: 50%;
+}
+.iconT {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-container {
+  display: flex;
+  gap: 30px;
+  margin: 40px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-pic {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.about-details-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-containers {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Experience Section */
+#experience,
+#badges-certifications {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.experience-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.experience-sub-title {
+  color: black;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+article img {
+  width: 24px;
+  height: 24px;
+}
+
+article h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+article p {
+  margin: 0;
+  color: rgb(85, 85, 85);
+}
+.project-details-container {
+  padding: 1.5rem;
+
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.arrow {
+  width: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.arrow:hover {
+  transform: translateY(5px);
+}
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+.experience-sub-title {
+  color: black;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.project-imgg {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+.section__text__p1 {
+  text-align: center;
+  color: black;
+}
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#projects {
+  position: relative;
+  text-align: center;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: block;
+  }
+
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .section__text {
+    text-align: center;
+  }
+
+  .section__pic-container {
+    margin-bottom: 20px;
+  }
+
+  .circle-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-containers {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    margin: 0 1rem;
+  }
+
+  /* .article-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+} */
+
+  /* .details-container {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 1.5rem;
+} */
+
+  article {
+    padding: 0.5rem;
+  }
+
+  .experience-details-container {
+    padding: 10px;
+  }
+
+  #experience,
+  #badges-certification {
+    padding: 30px 10px;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #2ecc71;
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Update article styling */
+/* .article-container article {
+display: flex;
+gap: 1rem;
+align-items: flex-start;
+padding: 1rem;
+} */
+
+/* .article-container article div {
+flex: 1;
+} */
+
+/* Progress Bar Container */
+
+/* Article Container Updates */
+.article-container article {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.article-container article div {
+  flex: 1;
+}
+
+/* Make sure h3 margins don't interfere with layout */
+.article-container h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/*
+
+  <!--logo blacck
+<img width="50" height="50" src="https://img.icons8.com/ios/50/developer--v1.png" alt="developer--v1"/>
+-->
+  
+  */

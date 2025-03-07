@@ -1,0 +1,226 @@
+/* Extra Small Mobile Devices (320px and below) */
+@media screen and (max-width: 320px) {
+  /* Role Text */
+  #rolelvl,
+  #role {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    max-width: 280px;
+    margin: 5px auto;
+  }
+
+  /* Project Containers */
+  .details-container.color-container {
+    width: 280px;
+    padding: 0.8rem;
+    margin: 1rem auto;
+  }
+
+  .project-img {
+    width: 240px;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .badge-project-title {
+    font-size: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btns.project-btn {
+    width: 120px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Info */
+  .contact-info-upper-container {
+    width: 280px;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 1rem auto;
+  }
+
+  .contact-info-container {
+    margin: 0.3rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info-container p {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+
+  .contact-info-container a {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+
+  .email-icon {
+    height: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* Small Mobile Devices (321px - 425px) */
+@media screen and (min-width: 321px) and (max-width: 425px) {
+  /* Role Text */
+  #rolelvl,
+  #role {
+    font-size: 1.4rem;
+    word-wrap: break-word;
+    max-width: 380px;
+    margin: 5px auto;
+  }
+
+  /* Project Containers */
+  .details-container.color-container,
+  .about-containers {
+    width: 340px;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .project-img {
+    width: 280px;
+    height: auto;
+    border-radius: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+    margin: 0.7rem 0;
+  }
+
+  .btn-container {
+    flex-direction: row;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+
+  .btns.project-btn {
+    width: 130px;
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  /* Contact Info */
+  .contact-info-upper-container {
+    width: 320px;
+    flex-direction: column;
+    padding: 0.7rem;
+    margin: 1rem auto;
+  }
+
+  .contact-info-container {
+    margin: 0.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info-container p {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .contact-info-container a {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .email-icon {
+    height: 2rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* Shared styles for small screens */
+@media screen and (max-width: 425px) {
+  /* Project Section */
+  .color-container {
+    border-width: 1px;
+    box-shadow: none;
+  }
+
+  .project-btn {
+    border-radius: 1.5rem;
+  }
+
+  /* Contact Section */
+  .contact-info-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-icon {
+    border-width: 1px;
+  }
+
+  /* Fix for long text */
+  .typewriter,
+  .typewriter-italic {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}
+
+/* Additional fixes for very small screens */
+@media screen and (max-width: 320px) {
+  .details-container.color-container {
+    width: 250px;
+  }
+
+  .project-img {
+    width: 220px;
+  }
+
+  .contact-info-upper-container {
+    width: 310px;
+  }
+
+  #rolelvl,
+  #role {
+    font-size: 1.1rem;
+    max-width: 240px;
+  }
+}
+.salesforce-cloud-emoji {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 14px;
+  background: #4a90e2;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.salesforce-cloud-emoji::before,
+.salesforce-cloud-emoji::after {
+  content: "";
+  position: absolute;
+  background: #4a90e2;
+  border-radius: 50%;
+}
+
+.salesforce-cloud-emoji::before {
+  width: 14px;
+  height: 14px;
+  top: -6px;
+  left: -4px;
+}
+
+.salesforce-cloud-emoji::after {
+  width: 18px;
+  height: 18px;
+  top: -8px;
+  right: -6px;
+}
